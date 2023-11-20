@@ -1,10 +1,10 @@
 package com.domain.jmp.dto;
 
-import lombok.NoArgsConstructor;
+import lombok.EqualsAndHashCode;
 
-@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 public class CreditBankCard extends BankCard {
-    public CreditBankCard(User user) {
-        super(user);
+    public CreditBankCard(String number, User user) {
+        super(number, user);
     }
 }

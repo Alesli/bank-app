@@ -1,4 +1,4 @@
-module jmp.service.api {
-    requires jmp.dto;
+module service.api {
+    requires dto;
     exports com.domain.jmp.service.api;
 }

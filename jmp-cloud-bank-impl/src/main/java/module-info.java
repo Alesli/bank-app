@@ -1,5 +1,5 @@
-module jmp.cloud.bank.impl {
-    requires transitive jmp.bank.api;
-    requires jmp.dto;
-    exports com.domain.jmp.cloud.bank.impl;
+module bank.impl {
+    requires transitive bank.api;
+    requires dto;
+    provides com.domain.jmp.bank.api.Bank with com.domain.jmp.cloud.bank.impl.BankImpl;
 }
