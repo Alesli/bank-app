@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
 
-public interface Service {
+public interface SubscriptionService {
 
     void subscribe(BankCard card);
     Optional<Subscription> getSubscriptionByBankCardNumber(String number);

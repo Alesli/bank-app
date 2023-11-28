@@ -1,5 +1,8 @@
+import com.domain.jmp.cloud.service.impl.CloudServiceImpl;
+import com.domain.jmp.service.api.SubscriptionService;
+
 module service.impl {
     requires transitive service.api;
     requires dto;
-    provides com.domain.jmp.service.api.Service with com.domain.jmp.cloud.service.impl.CloudServiceImpl;
+    provides SubscriptionService with CloudServiceImpl;
 }

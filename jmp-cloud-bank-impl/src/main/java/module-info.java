@@ -1,5 +1,8 @@
+import com.domain.jmp.bank.api.BankService;
+import com.domain.jmp.cloud.bank.impl.BankServiceImpl;
+
 module bank.impl {
     requires transitive bank.api;
     requires dto;
-    provides com.domain.jmp.bank.api.Bank with com.domain.jmp.cloud.bank.impl.BankImpl;
+    provides BankService with BankServiceImpl;
 }

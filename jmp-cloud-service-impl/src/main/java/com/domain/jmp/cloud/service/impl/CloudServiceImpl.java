@@ -3,7 +3,7 @@ package com.domain.jmp.cloud.service.impl;
 import com.domain.jmp.dto.BankCard;
 import com.domain.jmp.dto.Subscription;
 import com.domain.jmp.dto.User;
-import com.domain.jmp.service.api.Service;
+import com.domain.jmp.service.api.SubscriptionService;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -14,15 +14,19 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class CloudServiceImpl implements Service {
+public class CloudServiceImpl implements SubscriptionService {
 
     private final Map<String, Subscription> subscriptions = new ConcurrentHashMap<>();
     private final List<User> users = new ArrayList<>();
 
     @Override
     public void subscribe(BankCard bankCard) {
-        Subscription subscription = new Subscription(bankCard.getNumber(), LocalDate.now());
+        var subscription = new Subscription(bankCard.getNumber(), LocalDate.now());
         subscriptions.put(bankCard.getNumber(), subscription);
+        addUser(bankCard);
+    }
+
+    private void addUser(BankCard bankCard) {
         users.add(bankCard.getUser());
     }
 

@@ -1,14 +1,12 @@
 package com.domain.jmp.cloud.bank.impl;
 
-import com.domain.jmp.bank.api.Bank;
+import com.domain.jmp.bank.api.BankService;
 import com.domain.jmp.dto.*;
 
 import java.util.Random;
 import java.util.function.BiFunction;
 
-public class BankImpl implements Bank {
-
-    private final Random random = new Random();
+public class BankServiceImpl implements BankService {
     @Override
     public BankCard createBankCard(User user, BankCardType type) {
         BiFunction<String, User, BankCard> cardConstructor = switch (type) {
@@ -19,11 +17,12 @@ public class BankImpl implements Bank {
     }
 
     private BankCard createCard(BiFunction<String, User, BankCard> cardConstructor, User user) {
-        String cardNumber = generateCardNumber();
+        var cardNumber = generateCardNumber();
         return cardConstructor.apply(cardNumber, user);
     }
 
     private String generateCardNumber() {
+        var random = new Random();
         return String.format("%04d-%04d-%04d-%04d",
                 random.nextInt(10000),
                 random.nextInt(10000),

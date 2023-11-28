@@ -1,6 +1,9 @@
+import com.domain.jmp.bank.api.BankService;
+import com.domain.jmp.service.api.SubscriptionService;
+
 module jmp.application {
-    uses com.domain.jmp.bank.api.Bank;
-    uses com.domain.jmp.service.api.Service;
+    uses BankService;
+    uses SubscriptionService;
     requires bank.api;
     requires bank.impl;
     requires service.api;
