@@ -1,1 +1,1 @@
-# bank-app
+# java-advanced-backend-core
