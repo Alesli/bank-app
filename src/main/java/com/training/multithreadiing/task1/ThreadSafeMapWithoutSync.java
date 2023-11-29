@@ -37,7 +37,7 @@ public class ThreadSafeMapWithoutSync<K, V> {
         Thread readerThread = new Thread(() -> {
             while (true) {
                 int sum = map.map.values().stream().mapToInt(Integer::intValue).sum();
-                System.out.println("Current sum of values: " + sum);
+                log.info("Current sum of values: " + sum);
 
                 try {
                     Thread.sleep(100);

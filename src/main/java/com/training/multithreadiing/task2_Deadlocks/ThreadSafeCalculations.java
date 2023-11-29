@@ -1,4 +1,4 @@
-package com.training.multithreadiing.task2;
+package com.training.multithreadiing.task2_Deadlocks;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -45,7 +45,7 @@ public class ThreadSafeCalculations {
                         sum += number;
                     }
                 }
-                System.out.println("Sum: " + sum);
+                log.info("Sum: " + sum);
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -63,7 +63,7 @@ public class ThreadSafeCalculations {
                         sumOfSquares += Math.pow(number, 2);
                     }
                 }
-                System.out.println("Square root of sum of squares: " + Math.sqrt(sumOfSquares));
+                log.info("Square root of sum of squares: " + Math.sqrt(sumOfSquares));
                 try {
                     Thread.sleep(130);
                 } catch (InterruptedException e) {

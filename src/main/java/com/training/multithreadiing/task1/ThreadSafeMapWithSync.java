@@ -44,7 +44,7 @@ public class ThreadSafeMapWithSync<K, V> {
                         sum += value;
                     }
                 }
-                System.out.println("Current sum of values: " + sum);
+                log.info("Current sum of values: " + sum);
 
                 try {
                     Thread.sleep(100);
