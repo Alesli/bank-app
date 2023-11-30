@@ -25,7 +25,7 @@ public class SynchronizedMapExample {
             while (true) {
                 try {
                     int sum = map.values().stream().mapToInt(Integer::intValue).sum();
-                    System.out.println("Current sum of values: " + sum);
+                    log.info("Current sum of values: " + sum);
                 } catch (ConcurrentModificationException e) {
                     log.error("Caught ConcurrentModificationException", e);
                     break;
