@@ -1,4 +1,4 @@
-package com.training.multithreadiing.task3_ProducerConsume;
+package com.training.multithreadiing.task3_MessageBus;
 
 public class Main {
     public static void main(String[] args) {

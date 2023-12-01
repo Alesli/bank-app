@@ -1,4 +1,4 @@
-package com.training.multithreadiing.task3_ProducerConsume;
+package com.training.multithreadiing.task3_MessageBus;
 
 import lombok.extern.slf4j.Slf4j;
 
