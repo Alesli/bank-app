@@ -82,6 +82,18 @@ Diving into the world of reactive programming with React, encompassing:
 - Core concepts and implementation using `Project Reactor` and `Spring WebFlux`.
 - Building Reactive web applications with Spring Boot.
 - Integration with `Spring Reactive Data` for database operations in a reactive context.
+<details>
+<summary><u><strong>Relevant Resources:</strong></u></summary>
+
+- [Reactive programming](https://levelup.gitconnected.com/okay-but-what-exactly-is-reactive-programming-64ca2aabd1aa)
+- [Reactive mindset](https://www.linkedin.com/pulse/reactive-programming-selcuk-sert%3FtrackingId=NCjc2lXwTZuMjeHM0c0%252B1A%253D%253D/?trackingId=NCjc2lXwTZuMjeHM0c0%2B1A%3D%3D)
+- [Into to Project Reactor for Spring](https://www.linkedin.com/pulse/project-reactor-core-introduction-anmol-bhatia/)
+- [What is Mono And Flux](https://www.linkedin.com/pulse/project-reactor-how-mono-flux-work-anmol-bhatia/)
+- [Java Reactive](https://reflectoring.io/getting-started-with-spring-webflux/)
+- [Spring Boot WebFlux project example](https://spring.io/guides/gs/reactive-rest-service/)
+- [Building a Reactive App with Angular and Spring Boot 2](https://www.linkedin.com/learning/building-a-reactive-app-with-angular-and-spring-boot-2/zero-to-full-stack-app-with-angular-and-spring-boot?u=2113185)
+- [Project Reactor Learn](https://projectreactor.io/learn)
+</details>
 
 
 ### 5. Code Quality (`code-quality` branch)
