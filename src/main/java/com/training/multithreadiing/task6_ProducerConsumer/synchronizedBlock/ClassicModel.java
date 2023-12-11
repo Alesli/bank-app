@@ -32,7 +32,7 @@ public class ClassicModel {
                 consumerThread.join();
             } catch (InterruptedException e) {
                 log.error("Main thread interrupted during shutdown", e);
-                Thread.currentThread().interrupt();
+//                Thread.currentThread().interrupt();
             }
 
             var average = consumer.getAverage();
