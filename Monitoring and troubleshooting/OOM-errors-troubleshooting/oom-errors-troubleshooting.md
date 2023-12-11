@@ -79,8 +79,6 @@ jmap -histo 58104
 - Open the retrieved heap dump in `jvisualvm`.
 - Identify the memory leak.
 
-  ![Image](image_8.png)
-
 ## V. OQL
 
 1. Execute OQL in `jvisualvm`:
