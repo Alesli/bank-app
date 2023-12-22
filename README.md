@@ -59,6 +59,15 @@ Fields in the model:
 2. **Logging:**
     - Log the operations to track the pattern of `request(20)` calls followed by 20 `onNext()` calls, and then repeat the cycle.
 
+3. Set up a mock API using Mocky.io to simulate API response (go to [Mocky.io](https://designer.mocky.io/) ).
+   A mock response:
+```
+[
+    {"id": 1, "name": "Soccer"},
+    {"id": 2, "name": "Basketball"},
+    {"id": 3, "name": "Tennis"}
+]
+```
 ---
 
 This project encapsulates the core principles of reactive programming and provides hands-on experience with real-world data processing and API management in a reactive context. 
