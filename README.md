@@ -68,6 +68,10 @@ Fields in the model:
     {"id": 3, "name": "Tennis"}
 ]
 ```
+4. Local requests: 
+- POST `http://localhost:8080/api/v1/sport/{sportname}`
+- GET `http://localhost:8080/api/v1/sport?name={name}`
+- GET `http://localhost:8080/api/v1/sports`
 ---
 
 This project encapsulates the core principles of reactive programming and provides hands-on experience with real-world data processing and API management in a reactive context. 
