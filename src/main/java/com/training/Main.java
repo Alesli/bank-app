@@ -11,9 +11,25 @@ public class Main {
     public static void main(String[] args) {
         Main app = new Main();
 
+        app.itemsList();
+        app.switchCase();
+        app.useRawTypes();
+        app.unnecessaryLocalBeforeReturn();
+        app.manualArrayToCollectionCopy();
+        app.incorrectStringComparison();
+        app.potentialNullPointerException();
+        app.inefficientStringConcatenation();
+        app.uncheckedException();
+    }
+
+    @SuppressWarnings("all")
+    private void itemsList() {
         List<String> items = Arrays.asList("A", "B", "C");
         items.forEach(item -> System.out.println(item));
+    }
 
+    @SuppressWarnings("all")
+    private void switchCase() {
         int number = 2;
         switch (number) {
             default:
@@ -26,16 +42,9 @@ public class Main {
                 System.out.println("Two");
                 break;
         }
-
-        app.useRawTypes();
-        app.unnecessaryLocalBeforeReturn();
-        app.manualArrayToCollectionCopy();
-        app.incorrectStringComparison();
-        app.potentialNullPointerException();
-        app.inefficientStringConcatenation();
-        app.uncheckedException();
     }
 
+    @SuppressWarnings("unchecked")
     private void useRawTypes() {
         List numbers = Arrays.asList(1, 2, 3);
         for (Object number : numbers) {
@@ -43,6 +52,7 @@ public class Main {
         }
     }
 
+    @SuppressWarnings("all")
     private int unnecessaryLocalBeforeReturn() {
         int result = compute();
         return result;
@@ -52,6 +62,7 @@ public class Main {
         return 42;
     }
 
+    @SuppressWarnings("all")
     private void manualArrayToCollectionCopy() {
         String[] array = {"A", "B", "C"};
         List<String> list = new ArrayList<>(Arrays.asList(new String[array.length]));
@@ -60,6 +71,7 @@ public class Main {
         }
     }
 
+    @SuppressWarnings("all")
     private void incorrectStringComparison() {
         String a = new String("Test");
         String b = new String("Test");
@@ -68,6 +80,7 @@ public class Main {
         }
     }
 
+    @SuppressWarnings("all")
     private void potentialNullPointerException() {
         String str = null;
         if (str.equals("test")) {
@@ -75,6 +88,7 @@ public class Main {
         }
     }
 
+    @SuppressWarnings("all")
     private void inefficientStringConcatenation() {
         String str = "This is";
         for (int i = 0; i < 10; i++) {
@@ -83,6 +97,7 @@ public class Main {
         System.out.println(str);
     }
 
+    @SuppressWarnings("all")
     private void uncheckedException() {
         try {
             Integer.parseInt("Not a number");
