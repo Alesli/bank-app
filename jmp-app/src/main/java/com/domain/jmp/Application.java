@@ -10,6 +10,7 @@ import com.domain.jmp.service.api.SubscriptionService;
 import java.time.LocalDate;
 import java.util.ServiceLoader;
 
+
 public class Application {
     public static void main(String[] args) {
 
@@ -68,8 +69,9 @@ public class Application {
 
         // Demonstrate exception handling
         try {
-            subscriptionService.getSubscriptionByBankCardNumber("non-existent")
+           var subscriptionEr = subscriptionService.getSubscriptionByBankCardNumber("non-existent")
                     .orElseThrow(() -> new SubscriptionNotFoundException("Subscription not found"));
+            System.out.println("getSubscription: " + subscriptionEr.getStartDate());
         } catch (SubscriptionNotFoundException e) {
             System.err.println(e.getMessage());
         }

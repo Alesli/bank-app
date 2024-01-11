@@ -3,7 +3,7 @@ package com.domain.jmp.cloud.bank.impl;
 import com.domain.jmp.bank.api.BankService;
 import com.domain.jmp.dto.*;
 
-import java.util.Random;
+import java.security.SecureRandom;
 import java.util.function.BiFunction;
 
 public class BankServiceImpl implements BankService {
@@ -22,7 +22,7 @@ public class BankServiceImpl implements BankService {
     }
 
     private String generateCardNumber() {
-        var random = new Random();
+        var random = new SecureRandom();
         return String.format("%04d-%04d-%04d-%04d",
                 random.nextInt(10000),
                 random.nextInt(10000),
